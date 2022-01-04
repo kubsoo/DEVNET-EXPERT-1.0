@@ -1,5 +1,5 @@
 services:
-  node:
+  node1:
     container_name: flask_2
     image: flask-rest_2
     build:
@@ -7,3 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8888:5000"
+  node2:
+    container_name: flask_3
+    image: flask-rest_3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8889:5000"
