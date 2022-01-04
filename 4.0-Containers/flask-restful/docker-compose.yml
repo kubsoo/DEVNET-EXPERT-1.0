@@ -7,11 +7,22 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8888:5000"
+    volumes:
+      - ./logs:/var/log
+    networks:
+      - network-1
+    links:
+      - "node2:flask3" 
   node2:
-    container_name: flask_3
+    #container_name: flask_3
     image: flask-rest_3
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8889:5000"
+    networks:
+      - network-1
+networks:
+   network-1:
+     driver: bridge

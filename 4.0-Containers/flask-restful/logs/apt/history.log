@@ -1,0 +1,25 @@
+
+Start-Date: 2022-01-04  11:06:21
+Commandline: apt install net-tools
+Install: net-tools:amd64 (1.60+git20180626.aebd88e-1ubuntu1)
+End-Date: 2022-01-04  11:06:21
+
+Start-Date: 2022-01-04  11:06:46
+Commandline: apt install iputils-ping
+Install: libpam-cap:amd64 (1:2.32-1, automatic), libcap2:amd64 (1:2.32-1, automatic), libcap2-bin:amd64 (1:2.32-1, automatic), iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-01-04  11:06:46
+
+Start-Date: 2022-01-04  11:12:26
+Commandline: apt install iputils-ping
+Install: libpam-cap:amd64 (1:2.32-1, automatic), libcap2:amd64 (1:2.32-1, automatic), libcap2-bin:amd64 (1:2.32-1, automatic), iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-01-04  11:12:27
+
+Start-Date: 2022-01-04  11:14:23
+Commandline: apt install iputils-ping
+Install: libpam-cap:amd64 (1:2.32-1, automatic), libcap2:amd64 (1:2.32-1, automatic), libcap2-bin:amd64 (1:2.32-1, automatic), iputils-ping:amd64 (3:20190709-3)
+End-Date: 2022-01-04  11:14:23
+
+Start-Date: 2022-01-04  11:14:58
+Commandline: apt install curl
+Install: libcurl4:amd64 (7.68.0-1ubuntu2.7, automatic), curl:amd64 (7.68.0-1ubuntu2.7)
+End-Date: 2022-01-04  11:14:58
