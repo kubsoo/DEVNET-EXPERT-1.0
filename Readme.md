@@ -33,3 +33,12 @@
 | Poorly scalable  | Highly scalable  |
 | Pull-Model  | Push-Model  |
 | Non Automated  | Automation Ready/ Data-Model Driven  |
+
+
+# Encoding Options
+
+| Encoding | Description | Wire Efficiency | Other Considerations
+| ------------- | ------------- | ------------- | ------------- |
+| JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
+| GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
+| GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
