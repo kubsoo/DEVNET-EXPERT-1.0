@@ -22,3 +22,14 @@
 - [BLOG] [Streaming Telemetry with Google Protocol Buffers](https://blogs.cisco.com/sp/streaming-telemetry-with-google-protocol-buffers)
 - [GITHUB] [Cisco IOS XE - YANG based Model Driven Telemetry](https://github.com/jeremycohoe/cisco-ios-xe-mdt)
 - [CISCO LIVE] [Advanced Topics in Cisco IOS Telemetry](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf)
+
+<br></br>
+
+# SNMP vs MDT
+
+| Simple Network Management Protocol (SNMP) | Model Driven Telemetry (MDT)|
+| ------------- | ------------- |
+| Non Real-Time Information  | Real-Time Information |
+| Poorly scalable  | Highly scalable  |
+| Pull-Model  | Push-Model  |
+| Non Automated  | Automation Ready/ Data-Model Driven  |
