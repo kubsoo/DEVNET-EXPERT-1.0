@@ -92,11 +92,11 @@ Hence operators moved towards data model driven management. Network configuratio
 		</tr>
         		<tr>
 			<td><strong>Encodings</strong></td>
-			<td>XML</td>
+			<td><strong>XML</strong></td>
 			<td>No</td>
 			<td>No</td>
-			<td>Key-Value Google Protocol Buffers (kvGPB)</td>
-			<td>JSON_IETF</td>
+			<td><strong>Key-Value Google Protocol Buffers (kvGPB)</strong></td>
+			<td><strong>JSON_IETF</strong></td>
 			<td>No</td>
 		</tr>
 	</tbody>
