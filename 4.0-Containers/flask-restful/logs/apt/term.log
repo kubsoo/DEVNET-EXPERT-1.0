@@ -1,93 +1,0 @@
-
-Log started: 2022-01-04  11:06:21
-Selecting previously unselected package net-tools.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15790 files and directories currently installed.)
-Preparing to unpack .../net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64.deb ...
-Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
-Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
-Log ended: 2022-01-04  11:06:21
-
-Log started: 2022-01-04  11:06:46
-Selecting previously unselected package libcap2:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15839 files and directories currently installed.)
-Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2:amd64 (1:2.32-1) ...
-Selecting previously unselected package libcap2-bin.
-Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2-bin (1:2.32-1) ...
-Selecting previously unselected package iputils-ping.
-Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
-Unpacking iputils-ping (3:20190709-3) ...
-Selecting previously unselected package libpam-cap:amd64.
-Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
-Unpacking libpam-cap:amd64 (1:2.32-1) ...
-Setting up libcap2:amd64 (1:2.32-1) ...
-Setting up libcap2-bin (1:2.32-1) ...
-Setting up libpam-cap:amd64 (1:2.32-1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-Setting up iputils-ping (3:20190709-3) ...
-Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-Log ended: 2022-01-04  11:06:46
-
-Log started: 2022-01-04  11:12:26
-Selecting previously unselected package libcap2:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15790 files and directories currently installed.)
-Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2:amd64 (1:2.32-1) ...
-Selecting previously unselected package libcap2-bin.
-Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2-bin (1:2.32-1) ...
-Selecting previously unselected package iputils-ping.
-Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
-Unpacking iputils-ping (3:20190709-3) ...
-Selecting previously unselected package libpam-cap:amd64.
-Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
-Unpacking libpam-cap:amd64 (1:2.32-1) ...
-Setting up libcap2:amd64 (1:2.32-1) ...
-Setting up libcap2-bin (1:2.32-1) ...
-Setting up libpam-cap:amd64 (1:2.32-1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-Setting up iputils-ping (3:20190709-3) ...
-Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-Log ended: 2022-01-04  11:12:27
-
-Log started: 2022-01-04  11:14:23
-Selecting previously unselected package libcap2:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15790 files and directories currently installed.)
-Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2:amd64 (1:2.32-1) ...
-Selecting previously unselected package libcap2-bin.
-Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
-Unpacking libcap2-bin (1:2.32-1) ...
-Selecting previously unselected package iputils-ping.
-Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
-Unpacking iputils-ping (3:20190709-3) ...
-Selecting previously unselected package libpam-cap:amd64.
-Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
-Unpacking libpam-cap:amd64 (1:2.32-1) ...
-Setting up libcap2:amd64 (1:2.32-1) ...
-Setting up libcap2-bin (1:2.32-1) ...
-Setting up libpam-cap:amd64 (1:2.32-1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
-debconf: falling back to frontend: Readline
-Setting up iputils-ping (3:20190709-3) ...
-Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-Log ended: 2022-01-04  11:14:23
-
-Log started: 2022-01-04  11:14:58
-Selecting previously unselected package libcurl4:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15827 files and directories currently installed.)
-Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.7_amd64.deb ...
-Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.7) ...
-Selecting previously unselected package curl.
-Preparing to unpack .../curl_7.68.0-1ubuntu2.7_amd64.deb ...
-Unpacking curl (7.68.0-1ubuntu2.7) ...
-Setting up libcurl4:amd64 (7.68.0-1ubuntu2.7) ...
-Setting up curl (7.68.0-1ubuntu2.7) ...
-Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-Log ended: 2022-01-04  11:14:58

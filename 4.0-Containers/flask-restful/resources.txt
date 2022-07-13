@@ -1,3 +1,0 @@
-LABS:
-https://developer.cisco.com/learning/tracks/containers
-

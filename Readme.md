@@ -1,127 +1,180 @@
 # DevNet Expert (v1.0) Lab Exam Topics
+
+### 1.0 Software Design, Development, and Deployment - ``20%``
+---
+1.1 `Design` a solution based on an on-premises, hybrid, or public cloud deployment,considering these factors:
+- 1.1.a Deployment: maintainability, modularity (e.g., containers, VM, orchestration, automation, components, and infrastructure requirements)
+- 1.1.b Reliability: high availability and resiliency
+- 1.1.c Performance: scalability, latency, and rate limiting
+- 1.1.d Infrastructure: monitoring, observability, and metrics (e.g., instrument placement and instrument deployment)
+
+<br>
+
+### 2.0 Infrastructure as Code - ``30%``
+---
+2.1 `Create` a scalable solution for infrastructure automation (considering areas such as network impact, risk, and tool selection)
+
+2.2 Build, manage, and operate a Python-based REST API with a web application framework (endpoints, HTTP request, and response)
+
+2.3 Build, manage, and operate a Python-based CLI application to use a REST API
+
+2.4 Consume and use a new REST API, given the documentation
+
+2.5 `Create` a RESTCONF or NETCONF payload based on a given YANG module, and interpret the response
+
+2.6 `Create` a NETCONF filter by using XPath
+
+2.7 `Configure` network devices on an existing infrastructure by using NETCONF or RESTCONF, given YANG analysis tools
+
+2.8 Create and use a role by utilizing Ansible to manage infrastructure, given support documentation
+
+- 2.8.a Loop control
+
+- 2.8.b Conditionals
+
+- 2.8.c Use of variables and templating
+
+- 2.8.d Use of connection plug-ins such as network CLI, HTTPAPI, and NETCONF
+
+2.9 Use Terraform to statefully manage infrastructure, given support documentation
+
+- 2.9.a Loop control
+
+- 2.9.b Resource graphs
+
+- 2.9.c Use of variables
+
+- 2.9.d Resource retrieval
+
+- 2.9.e Resource provision
+
+- 2.9.f Management of the state of provisioned resources
+
+2.10 `Create` a basic Cisco NSO service package to meet given business and technical requirements. The service would generate a network configuration on the target device platforms using the "cisco-ios-cli" NED and be of type "python-and-template"
+
+- 2.10.a `Create` a service template from a provided NSO device configuration
+
+- 2.10.b `Create` a basic YANG module for the service containers (including lists, leaf lists, data types, leaf references, and single argument "when" and "must" conditions)
+
+- 2.10.c `Create` basic actions to verify operational status of the service
+
+- 2.10.d Monitor service status by reviewing the NCS Python VM log file
+
+<br>
+
+### 3.0 Network Programmability and Automation - ``25%``
+---
+3.1 Create, modify, and troubleshoot scripts by using Python libraries and SDK documentation to automate against APIs (ACI, AppDynamics, DNA Center, FDM, Intersight, IOS XE, Meraki, NSO, Webex)
+
+3.2 Automate the configuration of a Cisco IOS XE network device (based on a provided architecture and configuration), including these components:
+
+- 3.2.a Interfaces
+
+- 3.2.b Static routes
+
+- 3.2.c VLANs
+
+- 3.2.d Access control lists
+
+- 3.2.e BGP peering
+
+- 3.2.f BGP and OSPF routing tables
+
+- 3.2.g BGP and OSPF neighbors
+
+3.3 Deploy an application on a Cisco IOS XE device by leveraging the technologies of Guest Shell and application hosting
+
+3.4 Modify and troubleshoot an automated test by using pyATS to meet requirements
+
+- 3.4.a Create a testbed file for connecting to Cisco IOS, IOS XE, or NX-OS devices
+
+- 3.4.b Gather current configuration and operational state from devices using the Genie parsers and models included with pyATS
+
+- 3.4.c Develop and execute test jobs and scripts using AEtest to verify network health
+
 3.5 `Design` a model-driven telemetry solution based on given business and technical requirements by using gNMI dial-in, gRPC dial-out, and NETCONF dial-in
 
 3.6 `Create` YANG model-driven telemetry subscriptions
+
 - 3.6.a Identify model elements and cadence
+
 - 3.6.b On-change or event drive
+
 - 3.6.c Optimize frequency
+
 - 3.6.d Dial-out subscription
+
 - 3.6.e Secure telemetry streams
+
 - 3.6.f Confirm data transmission
+
 - 3.6.g Identify network issues and make changes
 
-<br></br>
+<br>
 
-# List of Materials
+### 4.0 Containers - ``10%``
+---
+4.1 `Create` a Docker image (including Dockerfile)
 
-- `BOOK` [Network Programmability with YANG: The Structure of Network Automation with YANG, NETCONF, RESTCONF, and gNMI](https://learning.oreilly.com/library/view/network-programmability-with/9780135180471/)
+- 4.1.a From a provided image
 
-- `CISCO DOCS` [Programmability Configuration Guide: Model-Driven Telemetry](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1612/b_1612_programmability_cg/model_driven_telemetry.html)
-- `YOUTUBE` [IOS-XE Model Driven Telemetry with gRPC Dial-Out](https://www.youtube.com/watch?v=p94yetSTXdc)
-- `DOCS` [Data Center Telemetry and Network Automation Using gNMI and OpenConfig White Paper](https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/white-paper-c11-744191.html)
-- `BLOG` [Streaming Telemetry with Google Protocol Buffers](https://blogs.cisco.com/sp/streaming-telemetry-with-google-protocol-buffers)
-- `GITHUB` [Cisco IOS XE - YANG based Model Driven Telemetry](https://github.com/jeremycohoe/cisco-ios-xe-mdt)
-- `CISCO LIVE` [Advanced Topics in Cisco IOS Telemetry](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf)
+- 4.1.b Expose ports
 
-<br></br>
+- 4.1.c Add or copy files
 
-# A Brief Introduction to Telemetry
+- 4.1.d Run commands during image build
 
-To start with, in simple terms, Telemetry is the collection process of useful operational data. As per Wikipedia, Telemetry is an automated communications process by which measurements and other data are collected at remote or inaccessible points and transmitted to receiving equipment for monitoring. Telemetry word itself is derived from Greek roots: tele = remote, and metron = measure.
+- 4.1.e Manipulate entry point and initial commands
 
-For the network management, Network operators have a long history of relying on Simple Network Management Protocol (SNMP). While SNMP is widely adopted for network monitoring, it was never used for configuration even though capability of configuration with snmp was always there. Operators have written automation scripts to handle day to day configuration tasks, but scripts are challenging for such tasks and difficult to manage.
+- 4.1.f Establish working directories
 
-Hence operators moved towards data model driven management. Network configuration is based on YANG data models pushed by protocols like netconf for example. Now just pushing the configuration doesn’t imply that configured service is running, there has to be a mechanism which can monitor services operational data at the same time as the configuration. This is where oper data models; which Telemetry uses to push information out of device; helps. Therefore, the configuration is YANG data model driven so must be the verification of service as well; as the case with Telemetry, in order to have the same object semantic. Hence the term is called Model Driven Telemetry or streaming Telemetry.
+- 4.1.g Environment variables as part of a definition to control an application
 
-`SOURCE` [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
+- 4.1.h Docker ignore file
 
-<br></br>
+- 4.1.i Volumes
 
-# SNMP vs MDT
+4.2 Package and deploy a solution by using Docker Compose
 
-| Simple Network Management Protocol (SNMP) | Model Driven Telemetry (MDT)|
-| ------------- | ------------- |
-| Non Real-Time Information  | Real-Time Information |
-| Poorly scalable  | Highly scalable  |
-| Pull-Model  | Push-Model  |
-| Non Automated  | Automation Ready/ Data-Model Driven  |
+- 4.2.a Deploy and manage containers
 
+- 4.2.b Define services, networks, volumes, and links
 
-`SOURCE` [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
+4.3 Package and deploy a solution by using Kubernetes
 
-<br></br>
-# Supported Combination of protocols
+- 4.3.a Use deployments, secrets, services, ingress, volumes, namespaces, and replicas
 
-<table>
-	<tbody>
-		<tr>
-			<td>Transport Protocol</td>
-			<td colspan="2"><strong>NETCONF</strong></td>
-			<td colspan="2"><strong>gRPC</strong></td>
-			<td colspan="2"><strong>gNMI</strong></td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-		</tr>
-		<tr>
-			<td colspan="9"><strong>Stream</strong></td>
-		</tr>
-		<tr>
-			<td>yang-push</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Yes</strong></td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-		</tr>
-        		<tr>
-			<td>yang-notif-native</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-		</tr>
-        		<tr>
-			<td><strong>Encodings</strong></td>
-			<td><strong>XML</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Key-Value Google Protocol Buffers (kvGPB)</strong></td>
-			<td><strong>JSON_IETF</strong></td>
-			<td>No</td>
-		</tr>
-	</tbody>
-</table>
+- 4.3.b Manage the lifecycle of pods (e.g., scale up, scale down, help status, logs)
 
-<br></br>
-# Dial-In and Dial-Out Model-Driven Telemetry
+- 4.3.c Monitor pods by building health checks)
 
-| Dial-In (Dynamic) | Dial-Out (Static or Configured) |
-| ------------- | ------------- |
-| Telemetry updates are sent to the initiator or subscriber  | Telemetry updates are sent to the specified receiver or collector |
-| Life of the subscription is tied to the connection (session) that created it, and over which telemetry updates are sent. No change is observed in the running configuration | Subscription is created as part of the running configuration; it remains as the device configuration till the configuration is removed |
-| Dial-in subscriptions need to be reinitiated after a reload, because established connections or sessions are killed during stateful switchover | Dial-out subscriptions are created as part of the device configuration, and they automatically reconnect to the receiver after a stateful switchover |
-| Subscription ID is dynamically generated upon successful establishment of a subscription | Subscription ID is fixed and configured on the device as part of the configuration | 
+- 4.3.d Use the kubectl interface
+
+4.4 Create, consume, and troubleshoot a Docker host and bridge-based networks and integrate them with external networks
 
 
-<br></br>
-# Encoding Options
+<br>
 
-| Encoding | Description | Wire Efficiency | Other Considerations
-| ------------- | ------------- | ------------- | ------------- |
-| JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
-| GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
-| GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
+### 5.0 Security - ``15%``
+---
+5.1 Leverage OWASP secure coding practices into all solutions to meet given requirements
 
-`SOURCE` [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
+- 5.1.a Input validation
 
-<br></br>
+- 5.1.b Authentication and password management
+
+- 5.1.c Access control
+
+- 5.1.d Cryptographic practices
+
+- 5.1.e Error handling and logging
+
+- 5.1.f Communication security
+
+5.2 `Create` a certificate signing request (CSR) by using OpenSSL; send CSR to a provided certificate authority; and use the certificate to secure a web application
+
+5.3 Use OAuth2+ to obtain an authentication token
+
+5.4 Use a secret management system to secure an application
+
+5.5 Use tokens, headers, and secrets to secure a REST API
