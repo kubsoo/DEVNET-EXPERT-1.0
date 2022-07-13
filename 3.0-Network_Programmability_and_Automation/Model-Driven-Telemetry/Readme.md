@@ -12,6 +12,21 @@
 
 <br></br>
 
+# LAB SECTION
+
+## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
+<br>
+
+### - [ncclient](#ncclient) 
+
+### - netmiko
+
+### - ansible (network_cli and netconf)
+
+### - restconf
+
+<br></br>
+
 # List of Materials
 
 - `BOOK` [Network Programmability with YANG: The Structure of Network Automation with YANG, NETCONF, RESTCONF, and gNMI](https://learning.oreilly.com/library/view/network-programmability-with/9780135180471/)
@@ -125,3 +140,10 @@ Hence operators moved towards data model driven management. Network configuratio
 `SOURCE` [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
 
 <br></br>
+
+# LAB
+---
+## ncclient
+
+dasdsadsa
+

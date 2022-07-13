@@ -92,9 +92,9 @@
 
 - 3.4.c Develop and execute test jobs and scripts using AEtest to verify network health
 
-[MDT](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry) 3.5 `Design` a model-driven telemetry solution based on given business and technical requirements by using gNMI dial-in, gRPC dial-out, and NETCONF dial-in
+3.5 `Design` a model-driven telemetry solution based on given business and technical requirements by using gNMI dial-in, gRPC dial-out, and NETCONF dial-in [MDT](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry)
 
-3.6 `Create` YANG model-driven telemetry subscriptions
+3.6 `Create` YANG model-driven telemetry subscriptions [MDT](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry)
 
 - 3.6.a Identify model elements and cadence
 
