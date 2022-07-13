@@ -145,9 +145,9 @@ Hence operators moved towards data model driven management. Network configuratio
 
 ## Create gRPC dial-out subscription using NETCONF and ncclient
 
-`TASK` Create python script which configure telemetry subscriptions that sends CPU utilization 5 seconds and memory statistic data to receiver every 5 seconds using ncclient python library:
+`TASK` Create python script which configure telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using ncclient python library.
 
-<br></br>
+### XPATHS:
 - CPU utilization 5 seconds 
 
 ```
