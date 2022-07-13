@@ -34,7 +34,7 @@
 | Pull-Model  | Push-Model  |
 | Non Automated  | Automation Ready/ Data-Model Driven  |
 
-
+<br></br>
 # Encoding Options
 
 | Encoding | Description | Wire Efficiency | Other Considerations
@@ -42,3 +42,57 @@
 | JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
 | GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
 | GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
+
+<br></br>
+# Encoding Options
+
+<table>
+	<tbody>
+		<tr>
+			<td>Transport Protocol</td>
+			<td colspan="2"><strong>NETCONF</strong></td>
+			<td colspan="2"><strong>gRPC</strong></td>
+			<td colspan="2"><strong>gNMI</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Dial-In</td>
+			<td>Dial-Out</td>
+			<td>Dial-In</td>
+			<td>Dial-Out</td>
+			<td>Dial-In</td>
+			<td>Dial-Out</td>
+		</tr>
+		<tr>
+			<td colspan="9"><strong>Stream</strong></td>
+		</tr>
+		<tr>
+			<td>yang-push</td>
+			<td><strong>Yes</strong></td>
+			<td>No</td>
+			<td>No</td>
+			<td><strong>Yes</strong></td>
+			<td><strong>Yes</strong></td>
+			<td>No</td>
+		</tr>
+        		<tr>
+			<td>yang-notif-native</td>
+			<td><strong>Yes</strong></td>
+			<td>No</td>
+			<td>No</td>
+			<td><strong>Yes</strong></td>
+			<td>No</td>
+			<td>No</td>
+		</tr>
+        		<tr>
+			<td><strong>Encodings</strong></td>
+			<td>XML</td>
+			<td>No</td>
+			<td>No</td>
+			<td>Key-Value Google Protocol Buffers (kvGPB)</td>
+			<td>JSON_IETF</td>
+			<td>No</td>
+		</tr>
+	</tbody>
+</table>
+
