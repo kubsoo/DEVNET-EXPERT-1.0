@@ -25,6 +25,18 @@
 
 <br></br>
 
+# A Brief Introduction to Telemetry
+
+To start with, in simple terms, Telemetry is the collection process of useful operational data. As per Wikipedia, Telemetry is an automated communications process by which measurements and other data are collected at remote or inaccessible points and transmitted to receiving equipment for monitoring. Telemetry word itself is derived from Greek roots: tele = remote, and metron = measure.
+
+For the network management, Network operators have a long history of relying on Simple Network Management Protocol (SNMP). While SNMP is widely adopted for network monitoring, it was never used for configuration even though capability of configuration with snmp was always there. Operators have written automation scripts to handle day to day configuration tasks, but scripts are challenging for such tasks and difficult to manage.
+
+Hence operators moved towards data model driven management. Network configuration is based on YANG data models pushed by protocols like netconf for example. Now just pushing the configuration doesn’t imply that configured service is running, there has to be a mechanism which can monitor services operational data at the same time as the configuration. This is where oper data models; which Telemetry uses to push information out of device; helps. Therefore, the configuration is YANG data model driven so must be the verification of service as well; as the case with Telemetry, in order to have the same object semantic. Hence the term is called Model Driven Telemetry or streaming Telemetry.
+
+[SOURCE] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
+
+<br></br>
+
 # SNMP vs MDT
 
 | Simple Network Management Protocol (SNMP) | Model Driven Telemetry (MDT)|
@@ -34,17 +46,11 @@
 | Pull-Model  | Push-Model  |
 | Non Automated  | Automation Ready/ Data-Model Driven  |
 
-<br></br>
-# Encoding Options
 
-| Encoding | Description | Wire Efficiency | Other Considerations
-| ------------- | ------------- | ------------- | ------------- |
-| JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
-| GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
-| GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
+[SOURCE] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
 
 <br></br>
-# Encoding Options
+# Supported Combination of protocols
 
 <table>
 	<tbody>
@@ -96,3 +102,26 @@
 	</tbody>
 </table>
 
+<br></br>
+# Dial-In and Dial-Out Model-Driven Telemetry
+
+| Dial-In (Dynamic) | Dial-Out (Static or Configured) |
+| ------------- | ------------- |
+| Telemetry updates are sent to the initiator or subscriber  | Telemetry updates are sent to the specified receiver or collector |
+| Life of the subscription is tied to the connection (session) that created it, and over which telemetry updates are sent. No change is observed in the running configuration | Subscription is created as part of the running configuration; it remains as the device configuration till the configuration is removed |
+| Dial-in subscriptions need to be reinitiated after a reload, because established connections or sessions are killed during stateful switchover | Dial-out subscriptions are created as part of the device configuration, and they automatically reconnect to the receiver after a stateful switchover |
+| Subscription ID is dynamically generated upon successful establishment of a subscription | Subscription ID is fixed and configured on the device as part of the configuration | 
+
+
+<br></br>
+# Encoding Options
+
+| Encoding | Description | Wire Efficiency | Other Considerations
+| ------------- | ------------- | ------------- | ------------- |
+| JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
+| GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
+| GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
+
+[SOURCE] [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
+
+<br></br>
