@@ -161,7 +161,7 @@ xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 ```
 
 
-`SOLUTION` [subscription.py]()
+`SOLUTION` [grpc_dial_out_netconf.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netconf.py)
 
 ## ncclient
 
