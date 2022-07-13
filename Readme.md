@@ -14,14 +14,14 @@
 
 # List of Materials
 
-- [BOOK] [Network Programmability with YANG: The Structure of Network Automation with YANG, NETCONF, RESTCONF, and gNMI](https://learning.oreilly.com/library/view/network-programmability-with/9780135180471/)
+- [`BOOK`] [Network Programmability with YANG: The Structure of Network Automation with YANG, NETCONF, RESTCONF, and gNMI](https://learning.oreilly.com/library/view/network-programmability-with/9780135180471/)
 
-- [CISCO DOCS] [Programmability Configuration Guide: Model-Driven Telemetry](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1612/b_1612_programmability_cg/model_driven_telemetry.html)
-- [YOUTUBE] [IOS-XE Model Driven Telemetry with gRPC Dial-Out](https://www.youtube.com/watch?v=p94yetSTXdc)
-- [DOCS] [Data Center Telemetry and Network Automation Using gNMI and OpenConfig White Paper](https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/white-paper-c11-744191.html)
-- [BLOG] [Streaming Telemetry with Google Protocol Buffers](https://blogs.cisco.com/sp/streaming-telemetry-with-google-protocol-buffers)
-- [GITHUB] [Cisco IOS XE - YANG based Model Driven Telemetry](https://github.com/jeremycohoe/cisco-ios-xe-mdt)
-- [CISCO LIVE] [Advanced Topics in Cisco IOS Telemetry](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf)
+- [`CISCO DOCS`] [Programmability Configuration Guide: Model-Driven Telemetry](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1612/b_1612_programmability_cg/model_driven_telemetry.html)
+- [`YOUTUBE`] [IOS-XE Model Driven Telemetry with gRPC Dial-Out](https://www.youtube.com/watch?v=p94yetSTXdc)
+- [`DOCS`] [Data Center Telemetry and Network Automation Using gNMI and OpenConfig White Paper](https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/white-paper-c11-744191.html)
+- [`BLOG`] [Streaming Telemetry with Google Protocol Buffers](https://blogs.cisco.com/sp/streaming-telemetry-with-google-protocol-buffers)
+- [`GITHUB`] [Cisco IOS XE - YANG based Model Driven Telemetry](https://github.com/jeremycohoe/cisco-ios-xe-mdt)
+- [`CISCO LIVE`] [Advanced Topics in Cisco IOS Telemetry](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf)
 
 <br></br>
 
@@ -33,7 +33,7 @@ For the network management, Network operators have a long history of relying on 
 
 Hence operators moved towards data model driven management. Network configuration is based on YANG data models pushed by protocols like netconf for example. Now just pushing the configuration doesn’t imply that configured service is running, there has to be a mechanism which can monitor services operational data at the same time as the configuration. This is where oper data models; which Telemetry uses to push information out of device; helps. Therefore, the configuration is YANG data model driven so must be the verification of service as well; as the case with Telemetry, in order to have the same object semantic. Hence the term is called Model Driven Telemetry or streaming Telemetry.
 
-[SOURCE] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
+[`SOURCE`] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
 
 <br></br>
 
@@ -47,7 +47,7 @@ Hence operators moved towards data model driven management. Network configuratio
 | Non Automated  | Automation Ready/ Data-Model Driven  |
 
 
-[SOURCE] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
+[`SOURCE`] [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
 
 <br></br>
 # Supported Combination of protocols
@@ -122,6 +122,6 @@ Hence operators moved towards data model driven management. Network configuratio
 | GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
 | GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
 
-[SOURCE] [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
+[`SOURCE`] [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
 
 <br></br>
