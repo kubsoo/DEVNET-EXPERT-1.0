@@ -17,7 +17,7 @@
 ## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
 <br>
 
-### - [ncclient](#ncclient) 
+### - [Create MDT subscription using NETCONF and ncclient](#ncclient) 
 
 ### - netmiko
 
@@ -141,9 +141,30 @@ Hence operators moved towards data model driven management. Network configuratio
 
 <br></br>
 
-# LAB
----
+# LAB TASKS
+
+## Create gRPC dial-out subscription using NETCONF and ncclient
+
+`TASK` Create python script which configure telemetry subscriptions that sends CPU utilization 5 seconds and memory statistic data to receiver every 5 seconds using ncclient python library:
+
+<br></br>
+- CPU utilization 5 seconds 
+
+```
+xpath : /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds 
+```
+
+- Memory Statistic
+
+```
+xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
+```
+
+
+`SOLUTION` [subscription.py]()
+
 ## ncclient
 
-dasdsadsa
+TASK
+
 
