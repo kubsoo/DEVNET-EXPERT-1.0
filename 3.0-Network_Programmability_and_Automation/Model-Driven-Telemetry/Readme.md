@@ -17,11 +17,11 @@
 ## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
 <br>
 
-### - [Create MDT subscription using NETCONF and ncclient](#ncclient) 
+### - [Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscription-using-netconf-and-ncclient) 
 
-### - netmiko
+### - [Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscription-using-netmiko) 
 
-### - ansible (network_cli and netconf)
+### - [Create gRPC dial-out subscriptions using ansible and network_cli module]()
 
 ### - restconf
 
@@ -140,7 +140,10 @@ Hence operators moved towards data model driven management. Network configuratio
 `SOURCE` [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
 
 <br></br>
-
+---
+---
+---
+<br></br>
 # LAB TASKS
 
 `xpath`
@@ -158,7 +161,7 @@ xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 ```
 <br></br>
 
-## 1. Create gRPC dial-out subscription using NETCONF and ncclient
+## 1. Create gRPC dial-out subscriptions using NETCONF and ncclient
 
 `TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using ncclient python library.
 
@@ -166,9 +169,17 @@ xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 <br></br>
 
 ---
-## 2. Create gRPC dial-out subscription using netmiko
+## 2. Create gRPC dial-out subscriptions using netmiko
 
 `TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netmiko python library.
 
 `SOLUTION` [grpc_dial_out_netmiko.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netmiko.py)
+<br></br>
+
+---
+## 3. Create gRPC dial-out subscriptions using ansible and network_cli module
+
+`TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using network_cli module.
+
+`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook.ymly)
 <br></br>
