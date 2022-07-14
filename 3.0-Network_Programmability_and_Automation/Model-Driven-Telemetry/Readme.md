@@ -27,6 +27,10 @@
 
 ### - [5. Create gRPC dial-out subscriptions using restconf](#5-create-grpc-dial-out-subscriptions-using-restconf)
 
+### - [6. Create Dynamic Subscriptions for NETCONF Dial-In using YANGSuite]()
+
+### - [7. Secure gRPC dial-out with TLS]()
+
 <br></br>
 
 # List of Materials
