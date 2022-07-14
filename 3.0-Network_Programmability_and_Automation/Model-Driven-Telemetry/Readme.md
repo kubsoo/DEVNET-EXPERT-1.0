@@ -17,13 +17,15 @@
 ## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
 <br>
 
-### - [Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscription-using-netconf-and-ncclient) 
+### - [Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
 
-### - [Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscription-using-netmiko) 
+### - [Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscriptions-using-netmiko) 
 
 ### - [Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
 
-### - restconf
+### - [Create gRPC dial-out subscriptions using ansible and netconf module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
+
+### - [Create gRPC dial-out subscriptions using restconf](#3-create-grpc-dial-out-subscriptions-using-restconf)
 
 <br></br>
 
@@ -181,5 +183,21 @@ xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 
 `TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using network_cli module.
 
-`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook.ymly)
+`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook.yml)
+<br></br>
+
+---
+## 4. Create gRPC dial-out subscriptions using ansible and netconf module
+
+`TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netconf module.
+
+`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook_netconf.yml)
+<br></br>
+
+---
+## 5. Create gRPC dial-out subscriptions using restconf
+
+`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using requests python library.
+
+`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/restconf.py)
 <br></br>
