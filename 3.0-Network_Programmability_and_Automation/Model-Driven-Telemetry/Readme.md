@@ -191,7 +191,7 @@ xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 
 `TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netconf module.
 
-`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook_netconf.yml)
+`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook-netconf.yml)
 <br></br>
 
 ---
