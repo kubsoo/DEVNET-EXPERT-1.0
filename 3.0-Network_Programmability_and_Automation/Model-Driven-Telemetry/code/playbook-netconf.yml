@@ -1,0 +1,45 @@
+### usage:
+## ansible-playbook playbook-netconf.yml -i hosts
+
+## edit hosts file before running playbook and update it with your router ip address
+
+
+---
+- name: Streaming Telemetry Playbook (netconf)
+  hosts: routers
+  vars:
+    ansible_network_os: ios
+    ansible_user: cisco 
+    ansible_password: cisco 
+    ansible_connection: netconf
+    xpaths:
+      1: '/process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds'
+      2: '/memory-ios-xe-oper:memory-statistics/memory-statistic'
+    receiver_ip: '192.168.54.1'
+    period: 500
+    receiver_port: 57500 
+  gather_facts: false
+
+  tasks:
+    - name: Configure streaming telemetry
+      netconf_config:
+        content: |
+         <config>
+          <mdt-config-data xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-mdt-cfg">
+            <mdt-subscription>
+              <subscription-id>{{item.key}}</subscription-id>
+              <base>
+                 <stream>yang-push</stream>
+                 <encoding>encode-kvgpb</encoding>
+                 <period>{{period}}</period>
+                 <xpath>{{item.value}}</xpath>
+              </base>
+              <mdt-receivers>
+                 <address>{{receiver_ip}}</address>
+                 <port>{{receiver_port}}</port>
+                 <protocol>grpc-tcp</protocol>
+              </mdt-receivers>
+            </mdt-subscription>
+          </mdt-config-data>
+         </config>
+      loop: "{{ lookup('dict',xpaths) }}"

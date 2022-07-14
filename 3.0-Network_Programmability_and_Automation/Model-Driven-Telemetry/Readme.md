@@ -17,15 +17,15 @@
 ## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
 <br>
 
-### - [Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
+### - [1. Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
 
-### - [Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscriptions-using-netmiko) 
+### - [2. Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscriptions-using-netmiko) 
 
-### - [Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
+### - [3. Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
 
-### - [Create gRPC dial-out subscriptions using ansible and netconf module](#4-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
+### - [4. Create gRPC dial-out subscriptions using ansible and netconf module](#4-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
 
-### - [Create gRPC dial-out subscriptions using restconf](#5-create-grpc-dial-out-subscriptions-using-restconf)
+### - [5. Create gRPC dial-out subscriptions using restconf](#5-create-grpc-dial-out-subscriptions-using-restconf)
 
 <br></br>
 
