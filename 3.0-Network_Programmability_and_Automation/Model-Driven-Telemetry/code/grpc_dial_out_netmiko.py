@@ -1,8 +1,9 @@
-from ncclient import manager
+from netmiko import ConnectHandler
 
 c8000v = {
-    'ip' : '192.168.54.131',
-    'port' : 830,
+    'device_type' : 'cisco_ios',
+    'host' : '192.168.54.131',
+    'port' : 22,
     'username' : 'cisco',
     'password' : 'cisco'
 }
@@ -16,33 +17,20 @@ xpaths = {
     2: '/memory-ios-xe-oper:memory-statistics/memory-statistic'
 }
 
-m = manager.connect(host=c8000v['ip'], port=c8000v['port'], username=c8000v['username'],
-                    password=c8000v['password'],hostkey_verify=False)
+net_connect = ConnectHandler(**c8000v)
 
+
+
+config_commands = []
 
 for key,value in xpaths.items():
+  config_lines = f'''telemetry ietf subscription {key}
+    encoding encode-kvgpb
+    filter xpath {value}
+    stream yang-push
+    update-policy periodic {period}
+    receiver ip address {receiver_ip} {receiver_port} protocol grpc-tcp'''
 
-    netconf_payload = f'''
-    <config>
-      <mdt-config-data xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-mdt-cfg">
-        <mdt-subscription>
-          <subscription-id>{key}</subscription-id>
-          <base>
-            <stream>yang-push</stream>
-            <encoding>encode-kvgpb</encoding>
-            <period>{period}</period>
-            <xpath>{value}</xpath>
-          </base>
-          <mdt-receivers>
-            <address>{receiver_ip}</address>
-            <port>{receiver_port}</port>
-            <protocol>grpc-tcp</protocol>
-          </mdt-receivers>
-        </mdt-subscription>
-      </mdt-config-data>
-    </config>
-    '''
-    response = m.edit_config(netconf_payload, target="running")
-
-    if response.ok:
-        print(f"Subscription {key} created succesfully!")
+  config_commands = config_lines.split('\n')
+  output = net_connect.send_config_set(config_commands)
+  print(output)

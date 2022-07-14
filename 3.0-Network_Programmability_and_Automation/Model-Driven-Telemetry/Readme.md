@@ -143,11 +143,8 @@ Hence operators moved towards data model driven management. Network configuratio
 
 # LAB TASKS
 
-## Create gRPC dial-out subscription using NETCONF and ncclient
+`xpath`
 
-`TASK` Create python script which configure telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using ncclient python library.
-
-### XPATHS:
 - CPU utilization 5 seconds 
 
 ```
@@ -159,14 +156,19 @@ xpath : /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds
 ```
 xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
 ```
+<br></br>
 
+## 1. Create gRPC dial-out subscription using NETCONF and ncclient
+
+`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using ncclient python library.
 
 `SOLUTION` [grpc_dial_out_netconf.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netconf.py)
+<br></br>
 
 ---
+## 2. Create gRPC dial-out subscription using netmiko
 
-## ncclient
+`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netmiko python library.
 
-TASK
-
-
+`SOLUTION` [grpc_dial_out_netmiko.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netmiko.py)
+<br></br>
