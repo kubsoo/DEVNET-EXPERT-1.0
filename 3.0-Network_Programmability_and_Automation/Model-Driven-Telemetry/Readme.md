@@ -23,9 +23,9 @@
 
 ### - [Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
 
-### - [Create gRPC dial-out subscriptions using ansible and netconf module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
+### - [Create gRPC dial-out subscriptions using ansible and netconf module](#4-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
 
-### - [Create gRPC dial-out subscriptions using restconf](#3-create-grpc-dial-out-subscriptions-using-restconf)
+### - [Create gRPC dial-out subscriptions using restconf](#5-create-grpc-dial-out-subscriptions-using-restconf)
 
 <br></br>
 
