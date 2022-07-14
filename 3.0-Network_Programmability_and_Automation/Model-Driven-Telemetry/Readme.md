@@ -21,7 +21,7 @@
 
 ### - [Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscription-using-netmiko) 
 
-### - [Create gRPC dial-out subscriptions using ansible and network_cli module]()
+### - [Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
 
 ### - restconf
 
