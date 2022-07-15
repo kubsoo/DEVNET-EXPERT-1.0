@@ -74,7 +74,7 @@ script sharing easier
 role_name
 
 |---- defaults  
-|         |_____ main.yml  
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|_____ main.yml  
 |  
 |---- files  
 |  
