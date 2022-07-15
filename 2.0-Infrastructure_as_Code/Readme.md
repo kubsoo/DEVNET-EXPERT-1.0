@@ -9,19 +9,7 @@
 
 # LAB SECTION
 
-### - [1. Create ansible playbook (with roles) to configure bgp](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
-
-### - [2. Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscriptions-using-netmiko) 
-
-### - [3. Create gRPC dial-out subscriptions using ansible and network_cli module](#3-create-grpc-dial-out-subscriptions-using-ansible-and-network_cli-module)
-
-### - [4. Create gRPC dial-out subscriptions using ansible and netconf module](#4-create-grpc-dial-out-subscriptions-using-ansible-and-netconf-module)
-
-### - [5. Create gRPC dial-out subscriptions using restconf](#5-create-grpc-dial-out-subscriptions-using-restconf)
-
-### - [6. Create Dynamic Subscriptions for NETCONF Dial-In using YANGSuite]()
-
-### - [7. Secure gRPC dial-out with TLS]()
+### - [1. Create ansible playbook (with roles) to configure bgp](#1-create-ansible-playbook-with-roles-to-configure-bgp) 
 
 <br></br>
 
