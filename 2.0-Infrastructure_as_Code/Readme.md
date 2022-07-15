@@ -9,10 +9,7 @@
 
 # LAB SECTION
 
-## IOS-XE gRPC dial-out using TIG (Telegraf + InfluxDB + Grafana ([setting up TIG docker container](https://github.com/jeremycohoe/cisco-ios-xe-mdt#docker-container-tig_mdt))
-<br>
-
-### - [1. Create gRPC dial-out subscriptions using NETCONF and ncclient](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
+### - [1. Create ansible playbook (with roles) to configure bgp](#1-create-grpc-dial-out-subscriptions-using-netconf-and-ncclient) 
 
 ### - [2. Create gRPC dial-out subscriptions using netmiko](#2-create-grpc-dial-out-subscriptions-using-netmiko) 
 
@@ -146,8 +143,6 @@ role_name
 
 <br></br>
 
-<br></br>
-
 # Loops
 
 ## Iterating over a simple list
@@ -204,41 +199,11 @@ Apache webserver {{ version_number }} is running on {{ server }}
 <br></br>
 # LAB TASKS
 
-## 1. Create gRPC dial-out subscriptions using NETCONF and ncclient
+## 1. Create ansible playbook (with roles) to configure bgp
 
-`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using ncclient python library.
+`TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from role_name/vars/main.yml file and using ios_config module.
 
-`SOLUTION` [grpc_dial_out_netconf.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netconf.py)
-<br></br>
 
----
-## 2. Create gRPC dial-out subscriptions using netmiko
 
-`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netmiko python library.
-
-`SOLUTION` [grpc_dial_out_netmiko.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netmiko.py)
-<br></br>
-
----
-## 3. Create gRPC dial-out subscriptions using ansible and network_cli module
-
-`TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using network_cli module.
-
-`SOLUTION` [playbook.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook.yml)
-<br></br>
-
----
-## 4. Create gRPC dial-out subscriptions using ansible and netconf module
-
-`TASK` Create ansible playbook which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using netconf module.
-
-`SOLUTION` [playbook-netconf.yml](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/playbook-netconf.yml)
-<br></br>
-
----
-## 5. Create gRPC dial-out subscriptions using restconf
-
-`TASK` Create python script which configure gRPC dial-out telemetry subscriptions that sends CPU utilization (5 sec) and memory statistics data to receiver every 5 seconds using requests python library.
-
-`SOLUTION` [restconf.py](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/restconf.py)
+`SOLUTION` [task_1](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netconf.py)
 <br></br>
