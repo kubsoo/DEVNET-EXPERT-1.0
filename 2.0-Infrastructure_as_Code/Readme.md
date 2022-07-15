@@ -146,6 +146,37 @@ role_name
 
 <br></br>
 
+<br></br>
+
+# Loops
+
+## Iterating over a simple list
+
+```
+- name: Add several users
+  ansible.builtin.user:
+    name: "{{ item }}"
+    state: present
+    groups: "wheel"
+  loop:
+     - testuser1
+     - testuser2
+```
+
+## Iterating over a dictionary
+
+```
+- name: Using dict2items
+  ansible.builtin.debug:
+    msg: "{{ item.key }} - {{ item.value }}"
+  loop: "{{ tag_data | dict2items }}"
+  vars:
+    tag_data:
+      Environment: dev
+      Application: payment
+```
+
+
 # Jinja2 templates
 
 Jinja2 tags:
@@ -156,7 +187,7 @@ Jinja2 tags:
 
 - **{#  #}** : These denote comments that describe a task.
 
----
+
 `example_template.j2`
 ```
 This is jinja2 template
@@ -172,21 +203,6 @@ Apache webserver {{ version_number }} is running on {{ server }}
 ---
 <br></br>
 # LAB TASKS
-
-`xpath`
-
-- CPU utilization 5 seconds 
-
-```
-xpath : /process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds 
-```
-
-- Memory Statistic
-
-```
-xpath : /memory-ios-xe-oper:memory-statistics/memory-statistic
-```
-<br></br>
 
 ## 1. Create gRPC dial-out subscriptions using NETCONF and ncclient
 
