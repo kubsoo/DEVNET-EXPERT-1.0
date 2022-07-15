@@ -42,14 +42,57 @@
 
 - `CISCO LIVE` [Network Automation using YANG Models across XE, XR, & NX - Ansible Networking](http://yang.ciscolive.com/pod0/labs/lab2/lab2-m4)
 
+- `BOOK` [Ansible: Up and Running, 3rd Edition](https://learning.oreilly.com/library/view/ansible-up-and/9781098109141/) 
+
 <br></br>
+
+# What is Ansible
+
+Ansible is a software tool that provides simple but powerful automation for cross-platform computer support. It is primarily intended for IT professionals, who use it for application deployment, updates on workstations and servers, cloud provisioning, configuration management, intra-service orchestration, and nearly anything a systems administrator does on a weekly or daily basis. Ansible doesn't depend on agent software and has no additional security infrastructure, so it's easy to deploy.
+
+Because Ansible is all about automation, it requires instructions to accomplish each job. With everything written down in simple script form, it's easy to do version control. The practical result of this is a major contribution to the "infrastructure as code" movement in IT: the idea that the maintenance of server and client infrastructure can and should be treated the same as software development, with repositories of self-documenting, proven, and executable solutions capable of running an organization regardless of staff changes.
+
+While Ansible may be at the forefront of automation, systems administration, and DevOps, it's also useful to everyday users. Ansible allows you to configure not just one computer, but potentially a whole network of computers at once, and using it requires no programming skills. Instructions written for Ansible are human-readable. Whether you're entirely new to computers or an expert, Ansible files are easy to understand.
+
+`SOURCE` [What is Ansible?](https://opensource.com/resources/what-ansible)
+
+<br></br>
+
+# Ansible Roles
+
+- Roles helps to organize complex and large playbooks into reusable
+components (file structures)
+
+- Roles allows for separating components of playbooks: variables,
+tasks, & templates etc into unique directories
+
+- Grouping contents using Ansible roles makes code/automation
+script sharing easier
+
+### Roles Directory Structure
+
+role_name
+|-- defaults`#1589F0`
+|    |_____ main.yml
+|
+|---- files
+|
+|---- handlers
+|
+|
+|
+|
+|
+|
+|
+|	 
 
 # Ansible Variables Precedence Order
 
-1. role defaults (defined in role/defaults/main.yml)
-**2. inventory file or script group vars**
+**1. role defaults (defined in role/defaults/main.yml)**
+2. inventory file or script group vars
 3. inventory group_vars/all
-4. splaybook group_vars/all
+**4. playbook group_vars/all**
 5. inventory group_vars/*
 6. playbook group_vars/*
 7. inventory file or script host vars
@@ -59,7 +102,7 @@
 11. play vars
 12. play vars_prompt
 13. play vars_files
-14. role vars (defined in role/vars/main.yml)
+**14. role vars (defined in role/vars/main.yml)**
 15. block vars (only for tasks in block)
 16. task vars (only for the task)
 17. role (and include_role) params
@@ -69,7 +112,7 @@
 21. extra vars (always win precedence)
 <br></br>
 
-# SNMP vs MDT
+# What is Ansible
 
 | Simple Network Management Protocol (SNMP) | Model Driven Telemetry (MDT)|
 | ------------- | ------------- |
