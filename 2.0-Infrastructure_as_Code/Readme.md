@@ -90,125 +90,57 @@ role_name
 |---- templates  
 |  
 |---- tests  
-|  
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ inventory    
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
 |  
 |---- vars  
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
 
+<br></br>
 
 # Ansible Variables Precedence Order
 
 **1. role defaults (defined in role/defaults/main.yml)**
+
 2. inventory file or script group vars
+
 3. inventory group_vars/all
+
 **4. playbook group_vars/all**
+
 5. inventory group_vars/*
+
 6. playbook group_vars/*
+
 7. inventory file or script host vars
+
 8. inventory host_vars/*
+
 9. playbook host_vars/*
+
 10. host facts
+
 11. play vars
+
 12. play vars_prompt
+
 13. play vars_files
+
 **14. role vars (defined in role/vars/main.yml)**
+
 15. block vars (only for tasks in block)
+
 16. task vars (only for the task)
+
 17. role (and include_role) params
+
 18. include params
+
 19. include_vars
+
 20. set_facts / registered vars
+
 21. extra vars (always win precedence)
-<br></br>
-
-# What is Ansible
-
-| Simple Network Management Protocol (SNMP) | Model Driven Telemetry (MDT)|
-| ------------- | ------------- |
-| Non Real-Time Information  | Real-Time Information |
-| Poorly scalable  | Highly scalable  |
-| Pull-Model  | Push-Model  |
-| Non Automated  | Automation Ready/ Data-Model Driven  |
-
-
-`SOURCE` [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
-
-<br></br>
-# Supported Combination of protocols
-
-<table>
-	<tbody>
-		<tr>
-			<td>Transport Protocol</td>
-			<td colspan="2"><strong>NETCONF</strong></td>
-			<td colspan="2"><strong>gRPC</strong></td>
-			<td colspan="2"><strong>gNMI</strong></td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-			<td>Dial-In</td>
-			<td>Dial-Out</td>
-		</tr>
-		<tr>
-			<td colspan="9"><strong>Stream</strong></td>
-		</tr>
-		<tr>
-			<td>yang-push</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Yes</strong></td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-		</tr>
-        		<tr>
-			<td>yang-notif-native</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Yes</strong></td>
-			<td>No</td>
-			<td>No</td>
-		</tr>
-        		<tr>
-			<td><strong>Encodings</strong></td>
-			<td><strong>XML</strong></td>
-			<td>No</td>
-			<td>No</td>
-			<td><strong>Key-Value Google Protocol Buffers (kvGPB)</strong></td>
-			<td><strong>JSON_IETF</strong></td>
-			<td>No</td>
-		</tr>
-	</tbody>
-</table>
-
-<br></br>
-# Dial-In and Dial-Out Model-Driven Telemetry
-
-| Dial-In (Dynamic) | Dial-Out (Static or Configured) |
-| ------------- | ------------- |
-| Telemetry updates are sent to the initiator or subscriber  | Telemetry updates are sent to the specified receiver or collector |
-| Life of the subscription is tied to the connection (session) that created it, and over which telemetry updates are sent. No change is observed in the running configuration | Subscription is created as part of the running configuration; it remains as the device configuration till the configuration is removed |
-| Dial-in subscriptions need to be reinitiated after a reload, because established connections or sessions are killed during stateful switchover | Dial-out subscriptions are created as part of the device configuration, and they automatically reconnect to the receiver after a stateful switchover |
-| Subscription ID is dynamically generated upon successful establishment of a subscription | Subscription ID is fixed and configured on the device as part of the configuration | 
-
-
-<br></br>
-# Encoding Options
-
-| Encoding | Description | Wire Efficiency | Other Considerations
-| ------------- | ------------- | ------------- | ------------- |
-| JSON  | Everything strings: keys and values | Low | Friendly. Human readable, easy for humans and code to parse
-| GBP-KV  | String keys and binary values (except values that are strings) | Medium Low | Single .proto file for decoding. Can use GPB tooling
-| GBP (-Compact)  | Everything binary (except values that are strings)  | High | Proto file per model
-
-`SOURCE` [https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf) - slide 33
 
 <br></br>
 ---
