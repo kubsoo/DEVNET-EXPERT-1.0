@@ -189,7 +189,7 @@ Apache webserver {{ version_number }} is running on {{ server }}
 
 ## 1. Create ansible playbook (with roles) to configure bgp
 
-`TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from role_name/vars/main.yml file and using ios_config module.
+`TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from role_name/vars/main.yml file and using ios_config module. Read TODO.txt file before creating task
 
 
 
