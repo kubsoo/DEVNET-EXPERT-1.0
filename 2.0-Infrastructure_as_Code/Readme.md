@@ -47,7 +47,7 @@
 # Ansible Variables Precedence Order
 
 1. role defaults (defined in role/defaults/main.yml)
-# 2. inventory file or script group vars
+**2. inventory file or script group vars**
 3. inventory group_vars/all
 4. splaybook group_vars/all
 5. inventory group_vars/*
