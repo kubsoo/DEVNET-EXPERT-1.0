@@ -100,13 +100,13 @@ role_name
 
 # Ansible Variables Precedence Order
 
-**1. role defaults (defined in role/defaults/main.yml)**
+1. **role defaults (defined in role/defaults/main.yml)**
 
 2. inventory file or script group vars
 
 3. inventory group_vars/all
 
-**4. playbook group_vars/all**
+4. **playbook group_vars/all**
 
 5. inventory group_vars/*
 
@@ -126,7 +126,7 @@ role_name
 
 13. play vars_files
 
-**14. role vars (defined in role/vars/main.yml)**
+14. **role vars (defined in role/vars/main.yml)**
 
 15. block vars (only for tasks in block)
 
