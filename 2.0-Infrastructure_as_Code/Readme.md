@@ -74,15 +74,15 @@ script sharing easier
 role_name
 
 |---- defaults  
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ main.yml  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ main.yml  
 |  
 |---- files  
 |  
 |---- handlers  
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
 |  
 |---- meta  
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
 
 
 
