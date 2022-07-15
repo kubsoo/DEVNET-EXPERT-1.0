@@ -31,25 +31,42 @@
 # List of Materials
 
 - `DOCS` [Ansible Documentation](https://docs.ansible.com/ansible/latest/user_guide/)
+
 - `DOCS` [Creating Roles](https://galaxy.ansible.com/docs/contributing/creating_role.html)
+
 - `YOUTUBE` [Ansible Roles Explained](https://www.youtube.com/watch?v=Or6k2UcKeN4)
-- `DOCS` [Data Center Telemetry and Network Automation Using gNMI and OpenConfig White Paper](https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/white-paper-c11-744191.html)
-- `BLOG` [Streaming Telemetry with Google Protocol Buffers](https://blogs.cisco.com/sp/streaming-telemetry-with-google-protocol-buffers)
-- `GITHUB` [Cisco IOS XE - YANG based Model Driven Telemetry](https://github.com/jeremycohoe/cisco-ios-xe-mdt)
-- `CISCO LIVE` [Advanced Topics in Cisco IOS Telemetry](https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKSPG-2503.pdf)
+
+- `TRAINING` [Introduction to Ansible](https://developer.cisco.com/learning/modules/sdx-ansible-intro/ansible-02_ansible-intro/step/1)
+
+- `VIDEO TRAINING` [Configuration Management and the Network](https://developer.cisco.com/video/net-prog-basics/05-netdevops)
+
+- `CISCO LIVE` [Network Automation using YANG Models across XE, XR, & NX - Ansible Networking](http://yang.ciscolive.com/pod0/labs/lab2/lab2-m4)
 
 <br></br>
 
-# A Brief Introduction to Telemetry
+# Ansible Variables Precedence Order
 
-To start with, in simple terms, Telemetry is the collection process of useful operational data. As per Wikipedia, Telemetry is an automated communications process by which measurements and other data are collected at remote or inaccessible points and transmitted to receiving equipment for monitoring. Telemetry word itself is derived from Greek roots: tele = remote, and metron = measure.
-
-For the network management, Network operators have a long history of relying on Simple Network Management Protocol (SNMP). While SNMP is widely adopted for network monitoring, it was never used for configuration even though capability of configuration with snmp was always there. Operators have written automation scripts to handle day to day configuration tasks, but scripts are challenging for such tasks and difficult to manage.
-
-Hence operators moved towards data model driven management. Network configuration is based on YANG data models pushed by protocols like netconf for example. Now just pushing the configuration doesn’t imply that configured service is running, there has to be a mechanism which can monitor services operational data at the same time as the configuration. This is where oper data models; which Telemetry uses to push information out of device; helps. Therefore, the configuration is YANG data model driven so must be the verification of service as well; as the case with Telemetry, in order to have the same object semantic. Hence the term is called Model Driven Telemetry or streaming Telemetry.
-
-`SOURCE` [ASR9K Model Driven Telemetry Whitepaper](https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/215321-asr9k-model-driven-telemetry-whitepaper.html)
-
+1. role defaults (defined in role/defaults/main.yml)
+# 2. inventory file or script group vars
+3. inventory group_vars/all
+4. splaybook group_vars/all
+5. inventory group_vars/*
+6. playbook group_vars/*
+7. inventory file or script host vars
+8. inventory host_vars/*
+9. playbook host_vars/*
+10. host facts
+11. play vars
+12. play vars_prompt
+13. play vars_files
+14. role vars (defined in role/vars/main.yml)
+15. block vars (only for tasks in block)
+16. task vars (only for the task)
+17. role (and include_role) params
+18. include params
+19. include_vars
+20. set_facts / registered vars
+21. extra vars (always win precedence)
 <br></br>
 
 # SNMP vs MDT
