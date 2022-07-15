@@ -72,19 +72,33 @@ script sharing easier
 ### Roles Directory Structure
 
 role_name
-|-- defaults`#1589F0`
+
+|-- defaults
+
 |    |_____ main.yml
+
 |
+
 |---- files
+
 |
+
 |---- handlers
+
 |
+
 |
+
 |
+
 |
+
 |
+
 |
+
 |
+
 |	 
 
 # Ansible Variables Precedence Order
