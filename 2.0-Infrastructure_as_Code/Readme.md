@@ -74,15 +74,17 @@ script sharing easier
 role_name
 
 |---- defaults  
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|_____ main.yml  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ main.yml  
 |  
 |---- files  
 |  
 |---- handlers  
-|      |____ main.yml  
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
 |  
 |---- meta  
-|	   |____ main.yml  s
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|____ main.yml  
+
+
 
 # Ansible Variables Precedence Order
 
