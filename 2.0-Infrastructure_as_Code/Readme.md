@@ -42,6 +42,8 @@
 
 - `CISCO LIVE` [Network Automation using YANG Models across XE, XR, & NX - Ansible Networking](http://yang.ciscolive.com/pod0/labs/lab2/lab2-m4)
 
+- `CISCO LIVE` [Use of Jinja2 templates with Ansible Playbook](https://fchaudhr.github.io/LTRDCN_1572/task3-vxlan-jinja2/)
+
 - `BOOK` [Ansible: Up and Running, 3rd Edition](https://learning.oreilly.com/library/view/ansible-up-and/9781098109141/) 
 
 <br></br>
@@ -143,6 +145,28 @@ role_name
 21. extra vars (always win precedence)
 
 <br></br>
+
+# Jinja2 templates
+
+Jinja2 tags:
+
+- **{{ }}**  : These double curly braces are the widely used tags in a template file and they are used for embedding variables and ultimately printing their value during code execution. For example, a simple syntax using the double curly braces is as shown: The **{{ webserver }}** is running on  **{{ nginx-version }}**
+
+- **{%  %}** : These are mostly used for control statements such as loops and if-else statements.
+
+- **{#  #}** : These denote comments that describe a task.
+
+---
+`example_template.j2`
+```
+This is jinja2 template
+Apache webserver {{ version_number }} is running on {{ server }}
+
+{% for item in routers %}
+	{{ item }}
+{% endfor %}
+```
+
 ---
 ---
 ---
