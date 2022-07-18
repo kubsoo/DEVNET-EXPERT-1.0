@@ -10,6 +10,7 @@
 # LAB SECTION
 
 ### - [1. Create ansible playbook (with roles) to configure bgp](#1-create-ansible-playbook-with-roles-to-configure-bgp) 
+### - [2. Create ansible playbook (with roles) to configure login banner using ios_banner module, when device is running version 17.X]()
 
 <br></br>
 
@@ -85,7 +86,7 @@ role_name
 
 <br></br>
 
-# Ansible Variables Precedence Order
+# Ansible Variables Precedence Order (from least to greatest, the last listed variables overrid all other variables)
 
 1. **role defaults (defined in role/defaults/main.yml)**
 
@@ -192,4 +193,11 @@ Apache webserver {{ version_number }} is running on {{ server }}
 `TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from host_vars file, templates and using ios_config module. Read TODO.txt file before creating task.
 
 `SOLUTION` [task_1](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/2.0-Infrastructure_as_Code/Ansible/task_1)
+<br></br>
+
+## 2. Create ansible playbook (with roles) to configure login banner using ios_banner module, when device is running version 17.X
+
+`TASK` Create ansible playbook (with roles) to configure login banner using ios_banner modul, when device is running version 17.X
+
+`SOLUTION` [task_2](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/2.0-Infrastructure_as_Code/Ansible/task_2)
 <br></br>
