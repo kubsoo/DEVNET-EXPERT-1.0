@@ -1,0 +1,11 @@
+asn: 65001
+router_id: 192.168.54.131
+log_neighbor_changes: true
+bgp_neighbors:
+  - remote_as: 65002
+    neighbor_ip: 192.168.54.132
+networks:
+  - network: 192.168.54.0
+    mask: 255.255.255.0
+  - network: 1.1.1.0
+    mask: 255.255.255.0

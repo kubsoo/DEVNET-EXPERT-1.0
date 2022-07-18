@@ -1,0 +1,7 @@
+---
+# tasks file for bgp_role
+
+- name: Configure BGP between routers
+  cisco.ios.ios_config:
+    src: "bgp_template.j2"
+    match: none

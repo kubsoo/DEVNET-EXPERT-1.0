@@ -180,7 +180,7 @@ Apache webserver {{ version_number }} is running on {{ server }}
 	{{ item }}
 {% endfor %}
 ```
-
+<br></br>
 ---
 ---
 ---
@@ -189,9 +189,7 @@ Apache webserver {{ version_number }} is running on {{ server }}
 
 ## 1. Create ansible playbook (with roles) to configure bgp
 
-`TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from role_name/vars/main.yml file and using ios_config module. Read TODO.txt file before creating task
+`TASK` Create ansible playbook (with roles) to configure bgp on 2 routers using variables from host_vars file, templates and using ios_config module. Read TODO.txt file before creating task.
 
-
-
-`SOLUTION` [task_1](https://github.com/kubsoo/DEVNET-EXPERT-1.0/blob/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry/code/grpc_dial_out_netconf.py)
+`SOLUTION` [task_1](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/2.0-Infrastructure_as_Code/Ansible/task_1)
 <br></br>
