@@ -10,7 +10,7 @@
 # LAB SECTION
 
 ### - [1. Create ansible playbook (with roles) to configure bgp](#1-create-ansible-playbook-with-roles-to-configure-bgp) 
-### - [2. Create ansible playbook (with roles) to configure login banner using ios_banner module, when device is running version 17.X]()
+### - [2. Create ansible playbook (with roles) to configure login banner using ios_banner module, when device is running version 17.X](#2-create-ansible-playbook-with-roles-to-configure-login-banner-using-ios_banner-module-when-device-is-running-version-17x)
 
 <br></br>
 
