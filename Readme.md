@@ -26,7 +26,7 @@
 
 2.7 `Configure` network devices on an existing infrastructure by using NETCONF or RESTCONF, given YANG analysis tools
 
-2.8 Create and use a role by utilizing Ansible to manage infrastructure, given support documentation [ANSIBLE](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/3.0-Network_Programmability_and_Automation/Model-Driven-Telemetry)
+2.8 Create and use a role by utilizing Ansible to manage infrastructure, given support documentation [ANSIBLE](https://github.com/kubsoo/DEVNET-EXPERT-1.0/tree/master/2.0-Infrastructure_as_Code/Ansible)
 
 - 2.8.a Loop control
 
