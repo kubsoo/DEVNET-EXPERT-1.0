@@ -1,0 +1,36 @@
+
+NETWORK TOPOLOGY:
+
+router_1  GigabitEthernet1 <=====> GigabitEthernet1  router_2
+
+
+
+
+Content of host_vars/router_1.yml:
+---
+asn: 65001
+router_id: 192.168.54.131
+log_neighbor_changes: true
+bgp_neighbors:
+  - remote_as: 65002
+    neighbor_ip: 192.168.54.132
+networks:
+  - network: 192.168.54.0
+    mask: 255.255.255.0
+  - network: 1.1.1.0
+    mask: 255.255.255.0
+
+
+Content of host_vars/router_2.yml:
+---
+asn: 65002
+router_id: 192.168.54.132
+log_neighbor_changes: true
+bgp_neighbors:
+  - remote_as: 65001
+    neighbor_ip: 192.168.54.131
+networks:
+  - network: 192.168.54.0
+    mask: 255.255.255.0
+  - network: 2.2.2.0
+    mask: 255.255.255.0

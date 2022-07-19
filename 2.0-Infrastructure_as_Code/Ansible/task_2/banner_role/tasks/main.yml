@@ -1,0 +1,10 @@
+---
+# tasks file for banner_role
+
+- name: Configure banner only for devices with 17.X sw version
+  cisco.ios.ios_banner:
+    banner: login
+    text: |
+      This is my banner - only for 17.X version
+    state: present
+  when: ansible_net_version is match ("17.*")

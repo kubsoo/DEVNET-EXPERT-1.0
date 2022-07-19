@@ -1,0 +1,8 @@
+---
+
+- name: Playbook
+  hosts: routers
+  gather_facts: true
+ 
+  roles:
+    - banner_role
